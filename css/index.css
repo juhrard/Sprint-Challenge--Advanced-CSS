@@ -1,3 +1,11 @@
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 17, 255, 0.507);
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -183,6 +191,10 @@ p {
   text-decoration: none;
   color: #454A59;
   font-size: 1.4rem;
+}
+.navcontainer nav a:hover {
+  animation: pulse 1s 1;
+  border-radius: 20px;
 }
 footer {
   color: #22283B;
