@@ -1,1 +1,67 @@
 // Mixins Here
+
+.display(@justify: space-evenly, @align: center) {
+  
+  display: flex;
+  justify-content: @justify;
+  align-items: @align;
+
+}
+
+.button(@w: 100px, @h: 30px) {
+
+  .display();
+  width: @w;
+  height: @h;
+  background: @btn-bg-color;
+  color: white;
+  font-size: 1.8rem;
+  border-radius: 5px;
+
+  &:hover {
+
+    background: lighten(@btn-bg-color, 50%);
+    color: @btn-bg-color;
+    .pulse(5px);
+
+  }
+
+}
+
+.phonepfont() {
+
+  font-weight: 600;
+  font-size: @phonepsize;
+
+}
+
+.pulse(@br: 20px) {
+
+  animation: pulse 1s infinite;
+  border-radius: @br;
+
+}
+
+@keyframes pulse {
+
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 17, 255, 0.507);
+  }
+
+  100% {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+  }
+
+}
+
+// @keyframes pulse {
+
+//   0% {
+//     box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+//   }
+
+//   100% {
+//     box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+//   }
+
+// }

@@ -10,6 +10,15 @@
 
     p {
       padding:0 15px;
+
+      @media @phone {
+        .phonepfont();
+      }
+    }
+
+    img {
+      border-radius: 5px;
+      width: 100%;
     }
   
   }
@@ -19,11 +28,23 @@
     flex-wrap: wrap;
     width: 100%;
 
+    @media @phone {
+      .display();
+
+      .launch, .sky {
+        display: none;
+      }
+    }
+
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+      @media @phone {
+        width: 90%;
+      }
     }
   }
 
@@ -32,10 +53,18 @@
 
     h3 {
       margin-top: 11px;
+
+      @media @phone {
+        font-size: @phonehsize;
+      }
     }
 
     p {
       margin-top: 13px;
+
+      @media @phone {
+        .phonepfont();
+      }
     }
   }
 
@@ -46,18 +75,39 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      .display(space-between);
+      flex-flow: column-reverse;
+      padding: 20px 20px;
+      margin-top: 15px;
+    }
+
     .walk-text {
       width: 50%;
 
+      @media @phone {
+        width: 100%;
+      }
+
       h3 {
         margin-bottom: 10px;
+
+        @media @phone {
+          margin-top: 10px;
+          font-size: @phonehsize;
+        }
       }
 
       p {
         margin-bottom: 26px;
+
+        @media @phone {
+          .phonepfont();
+        }
       }
 
       .btn {
+        .button(100%, 60px);
       }
     }
 
@@ -69,6 +119,11 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
+      }
+
+      @media @phone {
+        width: 100%;
+        margin-left: 0%;
       }
     }
   }
