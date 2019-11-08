@@ -193,7 +193,7 @@ p {
   font-size: 1.4rem;
 }
 .navcontainer nav a:hover {
-  animation: pulse 1s 1;
+  animation: pulse 1s infinite;
   border-radius: 20px;
 }
 footer {
@@ -326,6 +326,8 @@ footer {
 .home .walk .walk-text .btn:hover {
   background: #98a3c3;
   color: #22283A;
+  animation: pulse 1s infinite;
+  border-radius: 5px;
 }
 .home .walk .walk-img {
   width: 46%;

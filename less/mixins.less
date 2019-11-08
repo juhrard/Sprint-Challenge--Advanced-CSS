@@ -22,6 +22,7 @@
 
     background: lighten(@btn-bg-color, 50%);
     color: @btn-bg-color;
+    .pulse(5px);
 
   }
 
@@ -34,10 +35,10 @@
 
 }
 
-.pulse() {
+.pulse(@br: 20px) {
 
-  animation: pulse 1s 1;
-  border-radius: 20px;
+  animation: pulse 1s infinite;
+  border-radius: @br;
 
 }
 
